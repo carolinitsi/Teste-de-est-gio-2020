@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex-7</title>
+</head>
+<body>
+    <script>
+        var pessoa = [
+                        {id: 1, nome: 'juca', sobrenome: 'da silva', idade: 42},
+                        {id: 2, nome: 'daniel', sobrenome: 'gonçalves',  idade: 21},
+                        {id:3, nome: 'matheus', sobrenome: 'garcia', idade: 28},
+                        {id: 4, nome: 'gabriel', sobrenome: 'pinheiro',  idade: 21}
+                    ]
+        
+        for(var i in pessoa){
+            var n = pessoa[i].nome.substring(0,1).toUpperCase().concat(pessoa[i].nome.substr(1));
+            var s = pessoa[i].sobrenome.substring(0,1).toUpperCase().concat(pessoa[i].sobrenome.substr(1));
+            window.document.write(`Olá, ${n} ${s}!`);
+            window.document.write('<br>');
+            
+            }
+    </script>
+</body>
+</html>

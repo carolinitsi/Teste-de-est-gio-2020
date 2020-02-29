@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex-6</title>
+</head>
+<body>
+    <div>
+    <label>Cep:
+        <input name="cep" type="text" id="cep" value="" size="10" maxlength="8"
+               onblur="pesquisacep(this.value);" /></label><br />  
+              <div id="exibe"> </div>
+    </div>
+
+<script>
+     
+      function acao(conteudo){
+       var teste = document.getElementById("exibe");
+       teste.innerText=`${conteudo.logradouro}, ${conteudo.localidade}/${conteudo.uf}`;
+        
+      }
+      function pesquisacep(val){
+        var cep = val;
+        var script = document.createElement('script');
+        script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=acao';
+        document.body.appendChild(script);
+      }
+  
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<script>
+        var pessoa = [
+                        {id: 1, nome: 'juca', sobrenome: 'da silva', idade: 42},
+                        {id: 2, nome: 'daniel', sobrenome: 'gonçalves',  idade: 21},
+                        {id:3, nome: 'matheus', sobrenome: 'garcia', idade: 28},
+                        {id: 4, nome: 'gabriel', sobrenome: 'pinheiro',  idade: 21}
+                    ]
+        var i=0;
+        var teste=0;
+        
+        for(var i in pessoa){
+            if(pessoa[i].idade < 25){
+            document.write(`${pessoa[i].nome} tem menos de 25 anos, ele tem ${pessoa[i].idade} anos!`);
+            document.write("<br>");
+            teste ++;
+                }
+            }
+            if(teste == 0)
+                document.write("Não existe objeto com menos de 25 anos!");
+</script>
